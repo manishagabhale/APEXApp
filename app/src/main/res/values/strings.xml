@@ -1,0 +1,58 @@
+<resources>
+    <string name="app_name">APEXApp</string>
+    <string name="title_activity_dashboard">DashboardActivity</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="nav_header_title">Android Studio</string>
+    <string name="nav_header_subtitle">android.studio@android.com</string>
+    <string name="nav_header_desc">Navigation header</string>
+    <string name="action_settings">Settings</string>
+
+    <string name="menu_home">Home</string>
+    <string name="menu_gallery">Gallery</string>
+    <string name="menu_slideshow">Slideshow</string>
+
+    //Shared Preference
+    <string name="pref_file_">com.abc.preference_file_</string>
+    <string name="pref_status_first_time_come">com.abc.preference_status_first_time_come</string>
+    <string name="pref_status_publisher">com.abc.preference_status_publisher</string>
+    <string name="pref_login_status">com.abc.preference_login_status</string>
+    <string name="pref_login_type">com.abc.preference_login_type</string>
+    <string name="pref_language_id">com.abc.preference_language_id</string>
+    <string name="pref_user_id">com.abc.preference_user_id1</string>
+    <string name="pref_book_id">com.abc.preference_book_id1</string>
+    <string name="pref_ImageName">com.abc.preference_ImageName_</string>
+
+    //Alert
+    <string name="something_went_wrong">Something went wrong. please try again later</string>
+    <string name="please_check_internet_connection">Please check internet connection</string>
+    <string name="no_internet_connection">No Internet Connection</string>
+    <string name="permission_granted">Permission Granted</string>
+    <string name="app_needs_to_allow_some_permissions">App needs to allow some permissions</string>
+    <string name="allow">allow</string>
+    <string name="permission_denied">Permission denied</string>
+
+    <string name="full_name">Full Name</string>
+    <string name="mobile_number">Mobile Number</string>
+    <string name="email_address">Email Address</string>
+    <string name="college_name">College Name</string>
+    <string name="login">Login</string>
+    <string name="log_in">Log In</string>
+    <string name="start_test">Start Test</string>
+    <string name="save_next"><![CDATA[Save & Next]]></string>
+    <string name="previous">Previous</string>
+    <string name="mobile">Mobile number</string>
+    <string name="resend_otp">Resend OTP</string>
+    <string name="otp_send">OTP sent</string>
+    <string name="otp_not_send">OTP not sent</string>
+
+    <string name="underline_text"><u>Read</u></string>
+
+    <array name="array_course">
+        <item>Select Course</item>
+        <item>B pharmacy 2nd Year</item>
+        <item>B pharmacy 3rd Year</item>
+        <item>B pharmacy Final Year</item>
+        <item>B pharmacy PassOut</item>
+    </array>
+</resources>
