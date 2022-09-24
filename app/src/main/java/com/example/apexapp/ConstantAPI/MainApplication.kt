@@ -1,4 +1,4 @@
-package com.example.rajpathbookreaderapp.ConstantAPI
+package com.example.apexapp.ConstantAPI
 
 import android.app.Application
 import android.content.Context
@@ -19,10 +19,6 @@ class MainApplication : Application() {
 
     override fun onCreate() {
         super.onCreate()
-        // initialize for any
-
-        // Use ApplicationContext.
-        // example: SharedPreferences etc...
         val context: Context = MainApplication.applicationContext()
     }
 }

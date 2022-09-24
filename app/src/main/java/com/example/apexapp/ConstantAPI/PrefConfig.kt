@@ -1,4 +1,4 @@
-package com.example.rajpathbookreaderapp.ConstantAPI
+package com.example.apexapp.ConstantAPI
 
 import android.content.Context
 import com.example.apexapp.R
@@ -11,9 +11,7 @@ class PrefConfig(applicationContext: Context) {
     var list: ArrayList<String>? = null
 
     private var  sharedPreferences = applicationContext.getSharedPreferences(
-    applicationContext.getString(R.string.pref_file_),
-    Context.MODE_PRIVATE
-    )
+    applicationContext.getString(R.string.pref_file_), Context.MODE_PRIVATE)
 
     fun PrefConfig() {
 

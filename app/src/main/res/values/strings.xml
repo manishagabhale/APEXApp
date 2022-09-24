@@ -13,14 +13,13 @@
     <string name="menu_slideshow">Slideshow</string>
 
     //Shared Preference
-    <string name="pref_file_">com.abc.preference_file_</string>
+    <string name="pref_file_">com.abc.preference_file</string>
     <string name="pref_status_first_time_come">com.abc.preference_status_first_time_come</string>
     <string name="pref_status_publisher">com.abc.preference_status_publisher</string>
     <string name="pref_login_status">com.abc.preference_login_status</string>
     <string name="pref_login_type">com.abc.preference_login_type</string>
     <string name="pref_language_id">com.abc.preference_language_id</string>
-    <string name="pref_user_id">com.abc.preference_user_id1</string>
-    <string name="pref_book_id">com.abc.preference_book_id1</string>
+    <string name="pref_user_id">com.abc.preference_user_id</string>
     <string name="pref_ImageName">com.abc.preference_ImageName_</string>
 
     //Alert
@@ -45,6 +44,7 @@
     <string name="resend_otp">Resend OTP</string>
     <string name="otp_send">OTP sent</string>
     <string name="otp_not_send">OTP not sent</string>
+    <string name="title_home">Home</string>
 
     <string name="underline_text"><u>Read</u></string>
 
@@ -55,4 +55,6 @@
         <item>B pharmacy Final Year</item>
         <item>B pharmacy PassOut</item>
     </array>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
 </resources>

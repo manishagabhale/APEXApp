@@ -1,22 +1,21 @@
 package com.example.apexapp.Activity
 
 import android.os.Bundle
-import android.view.Menu
-import com.google.android.material.snackbar.Snackbar
-import com.google.android.material.navigation.NavigationView
-import androidx.navigation.findNavController
-import androidx.navigation.ui.AppBarConfiguration
-import androidx.navigation.ui.navigateUp
-import androidx.navigation.ui.setupActionBarWithNavController
-import androidx.navigation.ui.setupWithNavController
-import androidx.drawerlayout.widget.DrawerLayout
 import androidx.appcompat.app.AppCompatActivity
+import androidx.fragment.app.Fragment
+import com.example.apexapp.Activity.ui.home.HomeFragment
+import com.example.apexapp.Fragment.ProfileFragment
+import com.example.apexapp.Fragment.QuestionBankFragment
+import com.example.apexapp.Fragment.TestFragment
+import com.example.apexapp.Fragment.VideoFragment
 import com.example.apexapp.R
 import com.example.apexapp.databinding.ActivityDashboardBinding
+import com.example.rajpathbookreaderapp.ConstantAPI.PermissionAPI
+import com.google.android.material.bottomnavigation.BottomNavigationView
 
 class DashboardActivity : AppCompatActivity() {
 
-    private lateinit var appBarConfiguration: AppBarConfiguration
+
     private lateinit var binding: ActivityDashboardBinding
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -25,34 +24,45 @@ class DashboardActivity : AppCompatActivity() {
         binding = ActivityDashboardBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-        setSupportActionBar(binding.appBarDashboard.toolbar)
+        val permissions: PermissionAPI = PermissionAPI.getInstance(this)!!
+        permissions.permissionsCheck()
 
-        binding.appBarDashboard.fab.setOnClickListener { view ->
-            Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
-                .setAction("Action", null).show()
-        }
-        val drawerLayout: DrawerLayout = binding.drawerLayout
-        val navView: NavigationView = binding.navView
-        val navController = findNavController(R.id.nav_host_fragment_content_dashboard)
-        // Passing each menu ID as a set of Ids because each
-        // menu should be considered as top level destinations.
-        appBarConfiguration = AppBarConfiguration(
-            setOf(
-                R.id.nav_home, R.id.nav_gallery, R.id.nav_slideshow
-            ), drawerLayout
-        )
-        setupActionBarWithNavController(navController, appBarConfiguration)
-        navView.setupWithNavController(navController)
+
+        val bottomNav = findViewById<BottomNavigationView>(R.id.bottom_navigation)
+        loadFragment( HomeFragment())
+
+        bottomNav.setOnNavigationItemSelectedListener(BottomNavigationView.OnNavigationItemSelectedListener { item ->
+            val fragment: Fragment? = null
+            when (item.itemId) {
+                R.id.menu_home -> {
+                    loadFragment(HomeFragment())
+                    return@OnNavigationItemSelectedListener true
+                }
+                R.id.menu_video -> {
+                    loadFragment(VideoFragment())
+                    return@OnNavigationItemSelectedListener true
+                }
+                R.id.menu_question_bank -> {
+                    loadFragment(QuestionBankFragment())
+                    return@OnNavigationItemSelectedListener true
+                }
+                R.id.menu_test -> {
+                    loadFragment(TestFragment())
+                    return@OnNavigationItemSelectedListener true
+                }
+                R.id.menu_profile -> {
+                    loadFragment(ProfileFragment())
+                    return@OnNavigationItemSelectedListener true
+                }
+            }
+            false
+        })
+
     }
 
-    override fun onCreateOptionsMenu(menu: Menu): Boolean {
-        // Inflate the menu; this adds items to the action bar if it is present.
-        menuInflater.inflate(R.menu.dashboard, menu)
-        return true
-    }
-
-    override fun onSupportNavigateUp(): Boolean {
-        val navController = findNavController(R.id.nav_host_fragment_content_dashboard)
-        return navController.navigateUp(appBarConfiguration) || super.onSupportNavigateUp()
+    fun loadFragment(fragments: Fragment) {
+        val fragmentTransaction = supportFragmentManager.beginTransaction()
+        fragmentTransaction.replace(R.id.nav_host_container, fragments)
+        fragmentTransaction.commit()
     }
 }
