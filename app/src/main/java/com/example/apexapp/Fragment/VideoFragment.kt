@@ -18,6 +18,10 @@ import com.example.apexapp.ViewModelFactory.VideoListViewModelFactory
 import com.example.apexapp.databinding.FragmentVideoBinding
 import com.example.rajpathbookreaderapp.ConstantAPI.ApiClient
 import com.example.rajpathbookreaderapp.ConstantAPI.ApiInterface
+import com.google.android.exoplayer2.ExoPlayer
+import com.google.android.exoplayer2.MediaItem
+import com.google.android.exoplayer2.source.hls.HlsMediaSource
+import com.google.android.exoplayer2.upstream.DefaultHttpDataSource
 
 class VideoFragment : Fragment()  {
     private var _binding : FragmentVideoBinding? = null
@@ -25,6 +29,7 @@ class VideoFragment : Fragment()  {
 
     lateinit var videoListViewModel: VideoListViewModel
     var videoListAdapter = VideoListAdapter()
+
 
 
     override fun onCreateView(

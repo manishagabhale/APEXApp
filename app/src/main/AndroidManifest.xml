@@ -19,7 +19,8 @@
         android:usesCleartextTraffic="true">
         <activity
             android:name=".Activity.VideoDetailActivity"
-            android:exported="false" />
+            android:exported="false"
+            android:theme="@style/Theme.APEXApp.NoActionBar" />
         <activity
             android:name=".Activity.DashboardActivity"
             android:exported="false"
