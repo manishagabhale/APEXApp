@@ -74,6 +74,7 @@
         style="@style/AppTheme.Text.Medium_semi_bold"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
         android:background="@drawable/button"
         android:text="@string/log_in"
         android:textAllCaps="false"
@@ -81,7 +82,7 @@
         app:layout_constraintEnd_toStartOf="@+id/guideline3"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="@+id/guideline2"
-        app:layout_constraintTop_toBottomOf="@+id/checkBox2" />
+        app:layout_constraintTop_toBottomOf="@+id/forget_password" />
 
     <TextView
         android:id="@+id/txt_singup"
@@ -97,36 +98,37 @@
     <ImageView
         android:id="@+id/imageView"
         android:layout_width="0dp"
-        android:layout_height="300dp"
+        android:layout_height="240dp"
         android:layout_marginStart="16dp"
         android:layout_marginEnd="16dp"
         app:layout_constraintEnd_toStartOf="@+id/guideline3"
         app:layout_constraintStart_toStartOf="@+id/guideline2"
         app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintWidth_percent="0.5"
         app:srcCompat="@drawable/final_logo" />
 
-    <CheckBox
-        android:id="@+id/checkBox2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        style="@style/AppTheme.Text.Small"
-        android:buttonTint="@color/primaryColor"
-        android:text="Agree to term and conditions"
-        android:textColor="@color/black"
-        android:layout_marginTop="40dp"
-        app:layout_constraintStart_toStartOf="@+id/password"
-        app:layout_constraintTop_toBottomOf="@+id/password" />
+<!--    <CheckBox-->
+<!--        android:id="@+id/checkBox2"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        style="@style/AppTheme.Text.Small"-->
+<!--        android:buttonTint="@color/primaryColor"-->
+<!--        android:text="Agree to term and conditions"-->
+<!--        android:textColor="@color/black"-->
+<!--        android:layout_marginTop="40dp"-->
+<!--        app:layout_constraintStart_toStartOf="@+id/password"-->
+<!--        app:layout_constraintTop_toBottomOf="@+id/password" />-->
 
-    <TextView
-        android:id="@+id/textView18"
-        style="@style/AppTheme.Text.Small"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="4dp"
-        android:text="@string/underline_text"
-        android:textColor="@color/blue"
-        app:layout_constraintBottom_toBottomOf="@+id/checkBox2"
-        app:layout_constraintStart_toEndOf="@+id/checkBox2"
-        app:layout_constraintTop_toTopOf="@+id/checkBox2" />
+<!--    <TextView-->
+<!--        android:id="@+id/textView18"-->
+<!--        style="@style/AppTheme.Text.Small"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_marginStart="4dp"-->
+<!--        android:text="@string/underline_text"-->
+<!--        android:textColor="@color/blue"-->
+<!--        app:layout_constraintBottom_toBottomOf="@+id/checkBox2"-->
+<!--        app:layout_constraintStart_toEndOf="@+id/checkBox2"-->
+<!--        app:layout_constraintTop_toTopOf="@+id/checkBox2" />-->
 
 </androidx.constraintlayout.widget.ConstraintLayout>

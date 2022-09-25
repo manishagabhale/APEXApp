@@ -57,4 +57,6 @@
     </array>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+
+    <string name="track_selection_title">Video Quality</string>
 </resources>

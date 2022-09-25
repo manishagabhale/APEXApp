@@ -1,19 +1,18 @@
 package com.example.apexapp.Adapter
 
-import android.graphics.Paint
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.example.apexapp.Model.Result
-import com.example.apexapp.Model.VideoListModel
-import com.example.apexapp.databinding.ListItemVideolListBinding
+import com.example.apexapp.R
+import com.example.apexapp.databinding.ListItemVideoListBinding
 import com.example.rajpathbookreaderapp.ConstantAPI.ApiClient
 import com.squareup.picasso.Picasso
 
 
 class VideoListAdapter() : RecyclerView.Adapter<VideoListAdapter.MainViewHolder>() {
 
-    class MainViewHolder(val binding: ListItemVideolListBinding) :
+    class MainViewHolder(val binding: ListItemVideoListBinding) :
         RecyclerView.ViewHolder(binding.root) {
     }
 
@@ -25,7 +24,7 @@ class VideoListAdapter() : RecyclerView.Adapter<VideoListAdapter.MainViewHolder>
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): MainViewHolder {
         val view = LayoutInflater.from(parent.context)
-        val binding = ListItemVideolListBinding.inflate(view, parent, false)
+        val binding = ListItemVideoListBinding.inflate(view, parent, false)
         return MainViewHolder(binding)
     }
 
@@ -36,9 +35,8 @@ class VideoListAdapter() : RecyclerView.Adapter<VideoListAdapter.MainViewHolder>
         holder.binding.txtVideoName.text = videos.video_name
 
         Picasso.get()
-            .load(videos.video_thumbnail)
+            .load(ApiClient.Video_Thumbnail + videos.video_thumbnail)
             .into(holder.binding.imgVideo)
-
 
     }
 

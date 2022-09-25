@@ -31,8 +31,6 @@ class LoginActivity() : AppCompatActivity() {
         val permissions: PermissionAPI = PermissionAPI.getInstance(this)!!
         permissions.permissionsCheck()
 
-
-
         val api = ApiClient.getInstance().create(ApiInterface::class.java)
         val repository = LoginRepo(api,this)
 
@@ -40,15 +38,14 @@ class LoginActivity() : AppCompatActivity() {
             LoginViewModel::class.java
         )
 
-
         binding!!.btnLogin.setOnClickListener{
-        if (binding!!.checkBox2.isChecked) {
+       // if (binding!!.checkBox2.isChecked) {
             val username = binding!!.email.text.toString().trim()
             val password = binding!!.password.text.toString().trim()
 
             loginViewModel.loginData(username, password)
-        } else
-            Toast.makeText(this,"Please accept Term and Conditions", Toast.LENGTH_SHORT).show()
+        //} else
+         //   Toast.makeText(this,"Please accept Term and Conditions", Toast.LENGTH_SHORT).show()
          //  if( username.isValidEmail()) {
         //  if( username.isValidEmail()) {
         //  }
@@ -77,10 +74,10 @@ class LoginActivity() : AppCompatActivity() {
             startActivity(intent)
         }
 
-        binding!!.txtSingup.setOnClickListener {
-            val intent = Intent(this,SignUpActivity::class.java)
-            startActivity(intent)
-        }
+//        binding!!.txtSingup.setOnClickListener {
+//            val intent = Intent(this,SignUpActivity::class.java)
+//            startActivity(intent)
+//        }
     }
     fun String.isValidEmail() = isNotEmpty() && android.util.Patterns.EMAIL_ADDRESS.matcher(this).matches()
 }
